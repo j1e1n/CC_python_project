@@ -12,6 +12,6 @@ if __name__ == '__main__':
 
 @app.route('/')
 def home():
-    return "Hello World"
+    return render_template("index.html", title="Home")
 
 
