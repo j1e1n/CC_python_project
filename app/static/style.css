@@ -1,7 +1,7 @@
 body { 
     font-family: 'Della Respira', serif;
     /* font-family: 'Metamorphous', cursive; */
-    background-color: #EADEDB;
+    background-color : #cccfbb;
     margin: 0px;
     
 }
@@ -22,6 +22,7 @@ h1 {
     display: inline;
     margin: 20px;
     padding: 5px;
+    font-size: 14pt;
     
 }
 
