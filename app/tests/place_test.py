@@ -1,5 +1,6 @@
 import unittest
 from models.place import Place
+from models.country import Country
 
 class TestPlace(unittest.TestCase):
 
