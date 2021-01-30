@@ -1,0 +1,40 @@
+body { 
+    font-family: 'Della Respira', serif;
+    /* font-family: 'Metamorphous', cursive; */
+    background-color: #652521;
+    color:  #f0dc85;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    background-color: #191919;
+    list-style: none; 
+}
+
+.nav li {
+    display: inline;
+    margin: 20px;
+    padding: 5px;
+    
+}
+
+.nav li a {
+    color: #f0dc85;
+}
+
+h1 h2 h3 {
+    color:  #f0dc85;
+}
+
+.places {
+    border: #191919 solid 2px;
+    width: 50%;
+    padding: 10px;
+    margin: 10px;
+    color: black;
+}
+
+.places h2 {
+    color:  #f0dc85;
+}
