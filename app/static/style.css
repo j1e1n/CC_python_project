@@ -1,8 +1,13 @@
 body { 
     font-family: 'Della Respira', serif;
     /* font-family: 'Metamorphous', cursive; */
-    background-color: #9B2335;
-    color:  #f0dc85;
+    background-color: #EADEDB;
+    margin: 0px;
+    
+}
+
+h1 {
+    text-align: center;
 }
 
 .nav {
@@ -10,6 +15,7 @@ body {
     flex-direction: row;
     background-color: #191919;
     list-style: none; 
+    margin: 0px;
 }
 
 .nav li {
@@ -23,9 +29,6 @@ body {
     color: #f0dc85;
 }
 
-h1 h2 h3 {
-    color:  #f0dc85;
-}
 
 .places {
     border-radius: 5px;
@@ -34,11 +37,8 @@ h1 h2 h3 {
     margin: auto;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     text-align: center;
-    /* width: 50%;
-    padding: 10px;
-    margin: 10px; */
     color: black;
-    background-color: #F3E0BE;
+    background-color: #F0EAD6;
 }
 
 .journal {
@@ -48,9 +48,16 @@ h1 h2 h3 {
     margin: auto;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     text-align: center;
-    /* width: 50%;
-    padding: 10px;
-    margin: 10px; */
     color: black;
-    background-color: #F3E0BE;
+    background-color: #F0EAD6;
+}
+
+
+.button {
+    background-color: #191919;
+    color: #f0dc85;
+    margin: 15px;
+    padding: 3px;
+    
+
 }
