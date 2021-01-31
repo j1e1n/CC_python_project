@@ -2,7 +2,8 @@ body {
     font-family: 'Della Respira', serif;
     /* font-family: 'Metamorphous', cursive; */
     background-color : #cccfbb;
-    margin: 0px;
+    margin: 30px;
+
     
 }
 
@@ -33,24 +34,25 @@ h1 {
 
 .places {
     border-radius: 5px;
-    width: 50%;
     height: 50%;
     margin: auto;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     text-align: center;
     color: black;
     background-color: #F0EAD6;
+    width: 50%;
+    
 }
 
 .journal {
     border-radius: 5px;
-    width: 50%;
     height: 50%;
-    margin: auto;
+    margin: 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     text-align: center;
     color: black;
     background-color: #F0EAD6;
+    width: 50%;
 }
 
 
@@ -59,6 +61,16 @@ h1 {
     color: #f0dc85;
     margin: 15px;
     padding: 3px;
-    
-
 }
+
+
+.main {
+    display: flex;
+    flex-direction: row;
+    
+}
+
+/* .home-text {
+    text-align: center;
+    margin: 20px;
+} */
