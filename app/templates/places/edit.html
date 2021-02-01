@@ -1,1 +1,35 @@
-edit form goes here
+{% extends "base.html" %}
+
+{% block content %}
+
+<form action="/places/{{place.id}}" method="post">
+    <div>
+        <label for="name">Name:</label>
+        <input type="text" value="{{place.name}}" id="name" name="name" required autofocus>
+    </div>
+    <div>
+        <label for="country">Country:</label>
+        <select name="country_id" id="country">
+            {% for country in all_countries: %}
+                <option value="{{country.id}}" {%if place.country.id == country.id:%} selected="selected" {%endif%} >{{country.name}}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <div>
+        <label for="description">Description:</label>
+        <input type="text" value="{{place.description}}" id="description" name="description" required autofocus>
+    </div>
+    <div>
+        <label for="visited">Visited:</label>
+        <select name="visited" id="visited">
+            <option value="true" {%if place.visited == True:%} selected="selected" {%endif%} >Yes</option>
+            <option value="false" {%if place.visited == False:%} selected="selected" {%endif%}>Not Yet</option>
+        </select>
+    </div>
+   
+
+    <button type="submit">Update</button>
+
+</form>
+
+{% endblock %}
