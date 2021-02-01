@@ -44,3 +44,15 @@ def edit_place(id):
     place = place_repository.select(id)
     countries = country_repository.select_all()
     return render_template("places/edit.html", place=place, all_countries=countries)
+
+
+@places_blueprint.route('/places/<id>', methods=['POST'])
+def update_place(id):
+    name = request.form['name']
+    country_id = request.form['country_id']
+    description = request.form['description']
+    visited = request.form['visited']
+    country = country_repository.select(country_id)
+    place = Place(name, country, description, visited, id)
+    place_repository.update(place)
+    return show_place(id)
