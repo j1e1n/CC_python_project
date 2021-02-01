@@ -11,4 +11,12 @@ from models.place import Place
 @places_blueprint.route('/places')
 def places():
     places = place_repository.select_all()
-    return render_template("places/index.html", title="Places", places=places)
+    visited = []
+    not_visited = []
+    for place in places:
+        if place.visited == True:
+            visited.append(place)
+        else:
+            not_visited.append(place)
+
+    return render_template("places/index.html", title="Places", visited=visited, not_visited=not_visited )
