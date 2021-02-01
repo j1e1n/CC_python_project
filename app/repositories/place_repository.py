@@ -27,3 +27,16 @@ def select_all():
 def delete_all():
     sql = "DELETE FROM places"
     run_sql(sql)
+
+
+
+def select(id):
+    place = None
+    sql = "SELECT * FROM places WHERE id = %s"
+    values = [id]
+    result = run_sql(sql, values)[0]
+
+    if result != None:
+        country = country_repository.select(result['country_id'])
+        place = Place(result['name'], country, result['description'], result['visited'], result['id'])
+    return place
