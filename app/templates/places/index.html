@@ -5,11 +5,12 @@
 <div class="visited">
     {% for place in visited: %}
     <div class="name">
-        <h2>{{place.name}}  <a href="/places/{{place.id}}"><i class="far fa-file-alt fa-2x" style="color: black;"></i></a> </h2>
+        <h2>{{place.name}}</h2>  
     </div>
     <div class="country">
         <h4>{{place.country.name}}</h4>
     </div>
+    <a href="/places/{{place.id}}"><button class="button">Details</button></a> 
     <hr>
     
    
@@ -28,6 +29,7 @@
         <h4>{{place.country.name}}</h4>
     </div>
     <hr>
+    <a href="/places/{{place.id}}"><button class="button">Details</button></a> 
     {% endfor %}
 </div>
 

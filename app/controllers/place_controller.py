@@ -25,4 +25,8 @@ def places():
 @places_blueprint.route('/places/<id>', methods=['GET'])
 def show_place(id):
     place = place_repository.select(id)
-    return render_template("places/show.html", place=place)
+    visited = "Not yet."
+    if place.visited == True:
+        visited = "Yes."
+
+    return render_template("places/show.html", place=place, visited =visited)
