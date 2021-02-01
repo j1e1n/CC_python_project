@@ -11,5 +11,5 @@ CREATE TABLE places (
     name VARCHAR(255),
     description VARCHAR(255),
     visited BOOLEAN,
-    country_id INT REFERENCES countries(id)
+    country_id INT REFERENCES countries(id) ON DELETE CASCADE
 );

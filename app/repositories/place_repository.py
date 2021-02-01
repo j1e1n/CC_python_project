@@ -22,3 +22,8 @@ def select_all():
         place = Place(row['name'], country, row['description'], row['visited'], row['id'])
         places.append(place)
     return places
+
+
+def delete_all():
+    sql = "DELETE FROM places"
+    run_sql(sql)
