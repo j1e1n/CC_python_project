@@ -30,3 +30,9 @@ def show_place(id):
         visited = "Yes."
 
     return render_template("places/show.html", place=place, visited =visited)
+
+
+@places_blueprint.route('/places/<id>/delete', methods=['GET'])
+def delete_place(id):
+    place_repository.delete(id)
+    return redirect('/places')
