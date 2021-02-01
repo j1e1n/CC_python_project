@@ -36,3 +36,11 @@ def show_place(id):
 def delete_place(id):
     place_repository.delete(id)
     return redirect('/places')
+
+
+
+@places_blueprint.route('/places/<id>/edit', methods=['GET'])
+def edit_place(id):
+    place = place_repository.select(id)
+    countries = country_repository.select_all()
+    return render_template("places/edit.html", place=place, all_countries=countries)
