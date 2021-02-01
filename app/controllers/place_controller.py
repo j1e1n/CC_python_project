@@ -20,3 +20,9 @@ def places():
             not_visited.append(place)
 
     return render_template("places/index.html", title="Places", visited=visited, not_visited=not_visited )
+
+
+@places_blueprint.route('/places/<id>', methods=['GET'])
+def show_place(id):
+    place = place_repository.select(id)
+    return render_template("places/show.html", place=place)

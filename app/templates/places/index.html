@@ -5,15 +5,15 @@
 <div class="visited">
     {% for place in visited: %}
     <div class="name">
-        <h2>{{place.name}}</h2>
+        <h2>{{place.name}}  <a href="/places/{{place.id}}"><i class="far fa-file-alt fa-2x" style="color: black;"></i></a> </h2>
     </div>
     <div class="country">
         <h4>{{place.country.name}}</h4>
     </div>
     <hr>
     
-    <!-- <i class="far fa-file-alt fa-3x"></i>
-    <i class="far fa-edit fa-3x"></i>
+   
+    <!-- <i class="far fa-edit fa-3x"></i>
     <i class="fas fa-trash-alt fa-3x"></i> -->
 
     {% endfor %}
