@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="place">
+    {% for place in places: %}
+    <div class="name">
+        <h3>{{place.name}}</h3>
+    </div>
+    <div class="country">
+        <h4>{{place.country.name}}</h4>
+    </div>
+    <div class="description">
+        <p>{{place.description}}</p>
+    </div>
+    <hr>
+
+    {% endfor %}
+</div>
+
+
+{% endblock %}
