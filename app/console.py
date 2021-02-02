@@ -1,9 +1,11 @@
 import pdb
 from models.place import Place
 from models.country import Country
+from models.journal import Journal
 
 import repositories.place_repository as place_repository
 import repositories.country_repository as country_repository
+import repositories.journal_repository as journal_repository
 
 
 place_repository.delete_all()
@@ -20,5 +22,8 @@ place_repository.save(place_1)
 
 place_2 = Place("Ancient Ram Inn", country_2, "1100s pub, said to be the most haunted hotel in the country.")
 place_repository.save(place_2)
+
+journal_entry_1 = Journal(place_1, "This should be a journal entry for RMS Queen Mary......")
+journal_repository.save(journal_entry_1)
 
 pdb.set_trace()
