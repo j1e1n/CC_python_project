@@ -20,6 +20,7 @@ def select_all():
 
     for row in results:
         place = place_repository.select(row['place_id'])
-        entry = Journal(row['id'], place, row['journal_entry'])
+        entry = Journal(place, row['journal_entry'], row['id'])
         entries.append(entry)
+        print(row)
     return entries

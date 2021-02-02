@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<form action="/journal" method="post">
+    
+    <div>
+        <label for="place">Place:</label>
+        <select name="place_id" id="place">
+            {% for place in visited_places: %}
+                <option value="{{place.id}}">{{place.name}}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <div>
+        <label for="entry">Entry:</label>
+        <input type="text" id="entry" name="entry" placeholder="Record your experience here..." required autofocus>
+    </div>
+
+    <button type="submit">Add Entry</button>
+
+</form>
+
+{% endblock %}

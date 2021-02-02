@@ -3,19 +3,18 @@
 {% block content %}
 
 <div class="journal-entry">
-    {% for entry in entries: %}
-    <div class="place-name">
-        <h2>{{journal.place.name}}</h2>  
-    </div>
-    <div class="entry">
-        <p>{{journal.journal-entry}}</p>
-    </div>
-    <br>
-    <a href="/journal/{{journal.id}}/edit"><button class="button">Edit</button></a> 
+    {% for entry in all_entries %}
+        <div class="place-name">
+            <h2>{{entry.place.name}}</h2>  
+        </div>
+        <div class="entry">
+            <p>{{entry.journal_entry}}</p>
+        </div>
+    <a href="/journal/{{entry.id}}/edit"><button class="button">Edit Entry</button></a> 
     <hr>
     {% endfor %}
 </div>
 
-    <a href="/journal/new"><button class="button">New Journal Entry</button></a> 
+    <a href="/journal/new"><button class="button">New Entry</button></a> 
 
 {% endblock %}
