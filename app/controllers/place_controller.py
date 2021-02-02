@@ -6,7 +6,7 @@ places_blueprint = Blueprint("places", __name__)
 from repositories import place_repository
 from repositories import country_repository
 from models.place import Place
-
+from models.country import Country
 
 @places_blueprint.route('/places')
 def places():
@@ -56,3 +56,24 @@ def update_place(id):
     place = Place(name, country, description, visited, id)
     place_repository.update(place)
     return show_place(id)
+
+
+@places_blueprint.route('/places/new', methods = ['GET'])
+def new_place():
+    # countries = country_repository.select_all()
+    return render_template("places/new.html")
+
+
+@places_blueprint.route('/places', methods=['POST'])
+def create_place():
+    country = Country(request.form['country'])
+    country_repository.save(country)
+
+    name = request.form['name']
+    country_id = country.id
+    description = request.form['description']
+    visited = request.form['visited']
+    country = country_repository.select(country_id)
+    place = Place(name, country, description, visited)
+    place_repository.save(place)
+    return redirect('/places')
