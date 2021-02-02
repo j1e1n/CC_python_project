@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<div class="places">
+    {% for place in all_places: %}
+        <div class="place">
+            <h2>{{place.name}}</h2>  
+        </div>
+        <a href="/places/{{place.id}}"><button class="button">Details</button></a> 
+        <hr> 
+    {% endfor %}
+</div>
+
+
+{% endblock %}

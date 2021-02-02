@@ -4,16 +4,13 @@
 <div class="grid-container">
     <aside class="grid-item-3">
 
-        <h3>Search</h3>
+        <a href="/countries">See all countries</a>
         <br>
-        <h3>Add</h3>
+        <a href="/places/new">Add to the list</a>
         <br>
-        <h3>Edit</h3>
-        <br>
-        <h3>Delete</h3>
+        
     
     </aside>
-
 
     <div class="grid-item-1">
         <h1> <i class="fas fa-clipboard-check"></i> Visited <i class="fas fa-clipboard-check"></i> </h1>
@@ -43,8 +40,9 @@
             <div class="country">
                 <h4>{{place.country.name}}</h4>
             </div>
-            <hr>
+           
         <a href="/places/{{place.id}}"><button class="button">Details</button></a> 
+        <hr>
             {% endfor %}
         </div>
     </div>

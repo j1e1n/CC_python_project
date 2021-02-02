@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="countries">
+    {% for country in all_countries %}
+        <div class="country-name">
+            <h2>{{country.name}}</h2>  
+        </div>
+    <a href="/countries/{{country.id}}"><button class="button">See all places in country</button></a>
+    <br>
+    <a href="/countries/{{country.id}}/edit"><button class="button">Edit country</button></a>
+    <br>
+    <a href="/countries/{{country.id}}/delete">Delete Country and all it's places</a> 
+    <hr>
+    {% endfor %}
+</div>
+
+
+
+{% endblock %}

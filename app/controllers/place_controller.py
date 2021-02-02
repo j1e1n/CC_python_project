@@ -60,7 +60,6 @@ def update_place(id):
 
 @places_blueprint.route('/places/new', methods = ['GET'])
 def new_place():
-    # countries = country_repository.select_all()
     return render_template("places/new.html")
 
 
