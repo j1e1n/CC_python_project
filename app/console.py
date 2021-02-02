@@ -23,7 +23,10 @@ place_repository.save(place_1)
 place_2 = Place("Ancient Ram Inn", country_2, "1100s pub, said to be the most haunted hotel in the country.")
 place_repository.save(place_2)
 
-journal_entry_1 = Journal(place_1, "This should be a journal entry for RMS Queen Mary......")
+journal_entry_1 = Journal(place_1, "Very eerie location, heard childrens' voices by the pool.")
 journal_repository.save(journal_entry_1)
+
+journal_entry_2 = Journal(place_1, "Went back today, visited the engine room this time, there's an overwhelming feeling of being watched...")
+journal_repository.save(journal_entry_2)
 
 pdb.set_trace()

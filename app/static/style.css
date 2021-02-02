@@ -1,7 +1,7 @@
 body { 
     font-family: 'Della Respira', serif;
-    /* font-family: 'Metamorphous', cursive; */
-    background-color : #cccfbb;
+
+    background-color : #666d69;
     margin: 30px;
 
     
@@ -14,7 +14,7 @@ h1 {
 .nav {
     display: flex;
     flex-direction: row;
-    background-color: #191919;
+    background-color: #373a3a;
     list-style: none; 
     margin: 0px;
 }
@@ -27,7 +27,7 @@ h1 {
 }
 
 .nav li a {
-    color: #f0dc85;
+    color: #bc9d58;
 }
 
 
@@ -38,7 +38,7 @@ h1 {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     text-align: center;
     color: black;
-    background-color: #F0EAD6;
+    background-color: #cac9c6;
     width: 50%;
     
 }
@@ -50,14 +50,13 @@ h1 {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     text-align: center;
     color: black;
-    background-color: #F0EAD6;
+    background-color: #cac9c6;
     width: 50%;
 }
 
 
 .button {
-    background-color: #191919;
-    color: #f0dc85;
+    background-color: #bc9d58;
     margin: 15px;
     padding: 3px;
 }
@@ -69,7 +68,48 @@ h1 {
     
 }
 
-/* .home-text {
+.grid-container {
+    display: grid;
+    grid-template-areas: 
+    'bar list_1 list_2';  
+    grid-template-columns: 10% 45% 45%;  
+}
+
+
+.grid-item-1 {grid-area: list_1;}
+.grid-item-2 {grid-area: list_2;}
+
+.grid-item-3 {
+    grid-area: bar;
+    background-color: #bc9d58;
+    border-radius: 5px;
+    margin: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     text-align: center;
-    margin: 20px;
-} */
+    color: black;
+    
+    
+
+}
+
+.grid-item-1, .grid-item-2 {
+    border-radius: 5px;
+    margin: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    color: black;
+    background-color: #cac9c6;
+}
+
+.grid-item-1 > h1, .grid-item-2 > h1 {
+    border: black solid 5px;
+}
+
+.journal-entry {
+    background-color: #cac9c6;
+
+}
+
+hr {
+    border: white solid 1px;
+}
