@@ -11,12 +11,12 @@
             <p>{{entry.journal_entry}}</p>
         </div>
     <a href="/journal/{{entry.id}}/edit"><button class="button">Edit Entry</button></a> 
-    <br>
+    
     <a href="/journal/{{entry.id}}/delete"><button class="button">Delete Entry</button></a>
     <hr>
     {% endfor %}
 </div>
 
-    <a href="/journal/new"><button class="button">Write in the journal</button></a> 
+    <a href="/journal/new"><button class="button">New Entry</button></a> 
 
 {% endblock %}

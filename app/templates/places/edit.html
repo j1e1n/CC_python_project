@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-
+<div class="form">
 <form action="/places/{{place.id}}" method="post">
     <div>
         <label for="name">Name:</label>
@@ -15,7 +15,7 @@
             {% endfor %}
         </select>
     </div>
-    <div>
+    <div class="text-box">
         <label for="description">Description:</label>
         <input type="text" value="{{place.description}}" id="description" name="description" required autofocus>
     </div>
@@ -28,8 +28,8 @@
     </div>
    
 
-    <button type="submit">Update</button>
+    <button class="button" type="submit">Update</button>
 
 </form>
-
+</div>
 {% endblock %}

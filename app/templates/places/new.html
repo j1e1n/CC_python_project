@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-
+<div class="form">
 <form action="/places" method="post">
     <div>
         <label for="name">Name:</label>
@@ -24,8 +24,8 @@
     </div>
    
 
-    <button type="submit">Add Place</button>
+    <button class="button" type="submit">Add Place</button>
 
 </form>
-
+</div>
 {% endblock %}

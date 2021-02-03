@@ -3,7 +3,7 @@
 {% block content %}
 
 <h3>{{entry.place.name}}</h3>
-
+<div class="form">
 <form action="/journal/{{entry.id}}" method="post">
     <div>
         <label for="place">Place:</label>
@@ -18,8 +18,8 @@
         <input type="text" value="{{entry.journal_entry}}" id="entry" name="entry" required autofocus>
     </div>
 
-    <button type="submit">Update</button>
+    <button class="button" type="submit">Update</button>
 
 </form>
-
+</div>
 {% endblock %}

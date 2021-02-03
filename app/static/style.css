@@ -2,13 +2,16 @@ body {
     font-family: 'Della Respira', serif;
 
     background-color : #5F4554;
-    margin: 30px;
-
-    
+    margin: 50px;
 }
 
-h1 {
+head {
+    margin: 0;
+}
+
+main h1 {
     text-align: center;
+    font-size: 30pt;
 }
 
 .nav {
@@ -16,12 +19,12 @@ h1 {
     flex-direction: row;
     background-color: #373E40;
     list-style: none; 
-    margin: 0px;
+    
 }
 
 .nav li {
     display: inline;
-    margin: 20px;
+    margin: 10px;
     padding: 5px;
     font-size: 14pt;  
 }
@@ -57,8 +60,11 @@ h1 {
 
 .button {
     background-color: #8F7E4F;
+    height: 50px;
+    width: 70px;
     margin: 15px;
     padding: 3px;
+    font-size: 11pt;
 }
 
 
@@ -106,4 +112,73 @@ h1 {
 
 hr {
     border: white solid 1px;
+}
+
+.edit-delete {
+    
+    background-color: #373E40;
+    border-radius: 5px;
+    margin-left: 830px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    width: 100px;
+    padding: 10px;
+}
+
+.show {
+    background-color: #cbd1d0;
+    border-radius: 5px;
+    margin: 50px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+}
+
+.text {
+    padding: 50px;
+}
+
+.text p {
+    font-size: 16pt;
+}
+
+.form {
+    background-color: #cbd1d0;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-left: 650px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    font-size: 20pt;
+    padding: 30px;
+    width: 500px;
+}
+
+
+.journal-entry {
+    border-radius: 5px;
+    height: 50%;
+    margin: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: left;
+    color: black;
+    background-color: #cac9c6;
+    padding: 20px;
+
+}
+
+.countries {
+    border-radius: 5px;
+    height: 50%;
+    margin: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    color: black;
+    background-color: #cac9c6;
+    padding: 20px;
+    
+
+}
+
+.delete-country {
+    color: firebrick;
 }

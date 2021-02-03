@@ -1,16 +1,22 @@
 {% extends "base.html" %}
 
 {% block content %}
+<div class="show">
+    <div class="text">
+    <h1> {{place.name}}</h1>
+    <h2>{{place.country.name}}</h2>
+    <br>
+    <p>{{place.description}}</p>
+    <p>Visited: {{visited}}</p>
+    <br><br>
+    </div>
 
-<h2> {{place.name}}</h2>
-<h3>{{place.country.name}}</h3>
-<br>
-<p>{{place.description}}</p>
-<p>Visited: {{visited}}</p>
-<br><br>
-<a href="/places/{{place.id}}/edit"><i class="far fa-edit fa-3x"></i></a>
-<a href="/places/{{place.id}}/delete"><i class="fas fa-trash-alt fa-3x"></i></a>
-   
+    <div class="edit-delete">
+        <a href="/places/{{place.id}}/edit"><i class="far fa-edit fa-3x" style="color: #8F7E4F;"></i></a>
+        <a href="/places/{{place.id}}/delete"><i class="fas fa-trash-alt fa-3x" style="color: #8F7E4F;"></i></a>
+    </div>
+</div>
+
 
 
 {% endblock %}
