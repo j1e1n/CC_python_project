@@ -24,3 +24,27 @@ def select_all():
         entries.append(entry)
         print(row)
     return entries
+
+
+
+def delete(id):
+    sql = "DELETE FROM journal_entries WHERE id = %s"
+    values = [id]
+    run_sql(sql, values)
+
+
+def update(journal):
+    sql = "UPDATE journal_entries SET (place_id, journal_entry) = (%s, %s) WHERE id = %s"
+    values = [journal.place.id, journal.journal_entry, journal.id]
+    run_sql(sql, values)
+
+
+def select(id):
+    journal = None
+    sql = "SELECT * FROM journal_entries WHERE id = %s"
+    values = [id]
+    result = run_sql(sql, values)[0]
+
+    if result != None:
+        journal = Journal(result['place_id'], result['journal_entry'], result['id'])
+    return journal

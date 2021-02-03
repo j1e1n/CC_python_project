@@ -1,7 +1,7 @@
 body { 
     font-family: 'Della Respira', serif;
 
-    background-color : #305252;
+    background-color : #5F4554;
     margin: 30px;
 
     
@@ -28,11 +28,6 @@ h1 {
 
 .nav li a {
     color: #8F7E4F;
-}
-
-.nav li a :hover{
-    color: black;
-    background-color: #8F7E4F;
 }
 
 
@@ -103,9 +98,6 @@ h1 {
     background-color: #cac9c6;
 }
 
-.grid-item-1 > h1, .grid-item-2 > h1 {
-    border: black solid 5px;
-}
 
 .journal-entry {
     background-color: #cac9c6;

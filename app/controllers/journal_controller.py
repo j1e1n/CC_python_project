@@ -34,3 +34,31 @@ def create_journal_entry():
     entry = Journal(place, journal_entry)
     journal_repository.save(entry)
     return redirect('/journal')
+
+
+@journal_blueprint.route('/journal/<id>/delete', methods=['GET'])
+def delete_journal_entry(id):
+    journal_repository.delete(id)
+    return redirect('/journal')
+
+
+
+@journal_blueprint.route('/journal/<id>/edit', methods=['GET'])
+def edit_journal(id):
+    entry = journal_repository.select(id)
+    places = place_repository.select_all()
+    visited_places = []
+    for place in places:
+        if place.visited == True:
+            visited_places.append(place)
+    return render_template("journal/edit.html", entry=entry, visited_places=visited_places)
+
+
+@journal_blueprint.route('/journal/<id>', methods=['POST'])
+def update_place(id):
+    place_id = request.form['place_id']
+    entry = request.form['entry']
+    place = place_repository.select(place_id)
+    journal = Journal(place, entry, id)
+    journal_repository.update(journal)
+    return redirect('/journal')

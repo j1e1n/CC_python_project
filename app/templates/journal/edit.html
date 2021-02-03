@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h3>{{entry.place.name}}</h3>
+
+<form action="/journal/{{entry.id}}" method="post">
+    <div>
+        <label for="place">Place:</label>
+        <select name="place_id" id="place">
+            {% for place in visited_places: %}
+                <option value="{{place.id}}" {% if entry.place.id == place.id %} selected="selected" {%endif%} >{{place.name}}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <div>
+        <label for="entry">Entry:</label>
+        <input type="text" value="{{entry.journal_entry}}" id="entry" name="entry" required autofocus>
+    </div>
+
+    <button type="submit">Update</button>
+
+</form>
+
+{% endblock %}

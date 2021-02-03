@@ -8,6 +8,7 @@ from repositories import country_repository
 from models.place import Place
 from models.country import Country
 
+
 @places_blueprint.route('/places')
 def places():
     places = place_repository.select_all()
@@ -19,7 +20,7 @@ def places():
         else:
             not_visited.append(place)
 
-    return render_template("places/index.html", title="Places", visited=visited, not_visited=not_visited )
+    return render_template("places/index.html", visited=visited, not_visited=not_visited )
 
 
 @places_blueprint.route('/places/<id>', methods=['GET'])
