@@ -1,4 +1,4 @@
-# bucket_list_python_project
+CC Python Bucket List Solo Project
 
 A RESTful bucket-list management web app, written using Python’s Flask framework for both frontend and backend, a local PostgreSQL database was used as a data source.
 
